@@ -1,15 +1,17 @@
 // create your Media class:
 class Media {
+    static totalMediaCount = 0;
     constructor(title, year, genre) {
         this.title = title;
         this.year = year;
         this.genre = genre;
+        Media.totalMediaCount++;
     }
 
-    static totalMediaCount = 0;
+    
 
     summary() {
-        return `${this.title}, Year: ${this.year}, Genre: ${this.genre}`
+        return `Title: ${this.title}, Year: ${this.year}, Genre: ${this.genre}`
     }
 
 }
